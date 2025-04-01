@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-   <html>
-   <head>
-       <title>下载</title>
-       <script>
-           // 自动触发下载
-           window.onload = function() {
-               const link = document.createElement('a');
-               link.href = 'https://cdn.jsdelivr.net/gh/huang-heavenly-emperor.github.io/pdf/ssss.pdf';
-               link.download = 'research-paper.pdf';
-               document.body.appendChild(link);
-               link.click();
-           }
-       </script>
-   </head>
-   <body>
-       <p>如果下载未自动开始，请 <a href="javascript:location.reload()">点击这里</a></p>
-   </body>
-   </html>
+<html>
+<body>
+  <script>
+  // 自动触发下载
+  const cdnLink = 'https://cdn.jsdelivr.net/gh/huang-heavenly-emperor/pdf@main/ssss.pdf'
+  setTimeout(() => {
+    const link = document.createElement('a')
+    link.href = cdnLink
+    link.download = '重要文档.pdf'  // 自定义下载文件名
+    document.body.appendChild(link)
+    link.click()
+  }, 1000)
+  
+  // 备用下载按钮
+  document.write(`
+    <p style="margin:20px">
+      下载未自动开始？ 
+      <a href="${cdnLink}" style="color:blue">点击手动下载</a>
+    </p>
+  `)
+  </script>
+</body>
+</html>
