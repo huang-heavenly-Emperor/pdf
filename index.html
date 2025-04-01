@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+   <html>
+   <head>
+       <title>下载</title>
+       <script>
+           // 自动触发下载
+           window.onload = function() {
+               const link = document.createElement('a');
+               link.href = 'https://cdn.jsdelivr.net/gh/huang-heavenly-emperor.github.io/pdf/ssss.pdf';
+               link.download = 'research-paper.pdf';
+               document.body.appendChild(link);
+               link.click();
+           }
+       </script>
+   </head>
+   <body>
+       <p>如果下载未自动开始，请 <a href="javascript:location.reload()">点击这里</a></p>
+   </body>
+   </html>
